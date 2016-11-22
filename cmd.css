@@ -1,0 +1,73 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: #00ff00;
+  background-color: #000000;
+  font-family: Courier, monospace;
+}
+div#controlbar {
+  margin-top: 0.5em;
+  margin-bottom: 1px;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+div#controlbar a {
+  margin: 0;
+  color: #00ff00;
+  border-top: 1px solid #00ff00;
+  border-left: 1px solid #00ff00;
+  border-bottom: 1px solid #008000;
+  border-right: 1px solid #008000;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+div#controlbar a:hover {
+  color: #00ff00;
+  text-decoration: underline;
+  border-top: 1px solid #008000;
+  border-left: 1px solid #008000;
+  border-bottom: 1px solid #00ff00;
+  border-right: 1px solid #00ff00;
+}
+div#controlbar a:active {
+  color: #000000;
+  background-color: #008000;
+  text-decoration: none;
+  border-top: 1px solid #00cc00;
+  border-left: 1px solid #00cc00;
+  border-bottom: 1px solid #006600;
+  border-right: 1px solid #006600;
+}
+#screen {
+  font-family: Courier, monospace;
+  background-color: black;
+  color: #00ff00;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: left;
+  clear: both;
+}
+.userInput {
+  font-family: Courier, monospace;
+  color: #00ff00;
+  background-color: #000000;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px dashed #008000;  
+}
+#footer {
+  font-size: xx-small;
+  float: left;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin: 2px 0;
+  padding: 0;
+  border: 0;
+}
