@@ -3,7 +3,7 @@ function ServerComm(con) {
     this.xmlhttp = makeajax();
     this.cmdurl="/cmd.php?";
 
-    this.requestOutput = function(req,wait) {
+    this.requestOutput = function(req) {
 	if (this.xmlhttp===null) {
 	    this.con.output("Server communication unavailable");
 	    return null;
