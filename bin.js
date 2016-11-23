@@ -3,7 +3,7 @@ var bin = new Array();
 var helptxt = new Array();
 helptxt['date'] = "usage: date<br><br>&nbsp;Prints the date and time";
 helptxt['eval'] = "usage: eval [expr]<br><br>&nbsp;Prints the result of javascript eval(expr)<br>&nbsp;Prompts for expr if not specified";
-helptxt['fullscreen'] = "usage: fullscreen<br><br>&nbsp;Elarges the browser window to the entire screen";
+//helptxt['fullscreen'] = "usage: fullscreen<br><br>&nbsp;Elarges the browser window to the entire screen";
 helptxt['info'] = "usage: info<br><br>&nbsp;Prints information about your browser";
 helptxt['open'] = "usage: open [URL]<br><br>&nbsp;Opens the specified URL";
 helptxt['random'] = "usage: random [n]<br><br>&nbsp;Prints a random number between 0 and n (default 1)";
@@ -148,10 +148,12 @@ bin['open'] = function() {
 	window.open(this.args);
     }
 }
+/*
 bin['fullscreen'] = function() {
     window.resizeTo(screen.availWidth,screen.availHeight);
     window.moveTo(0,0);
 }
+*/
 bin['server'] = function() {
     if (sys.server.xmlhttp===null) {
 	this.output("Server communication unavailable");
