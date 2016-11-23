@@ -1,7 +1,7 @@
 function ServerComm(con) {
     this.con = con;
     this.xmlhttp = makeajax();
-    this.cmdurl="/cmd.php?";
+    this.cmdurl="cmd.php?";
 
     this.requestOutput = function(req) {
 	if (this.xmlhttp===null) {
