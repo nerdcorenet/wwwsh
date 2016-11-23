@@ -71,7 +71,7 @@ function Console() {
 	input.id = "userInput"+id;
 	input.size = 80-txt.length;
 	input.className = "userInput";
-	input.setAttribute("onkeydown","sys.con.keypress(event,"+id+")");
+	//input.setAttribute("onkeydown","sys.con.keypress(event,"+id+")");
 	holder.appendChild(prompt);
 	holder.appendChild(input);
 	this.screen.appendChild(holder);
