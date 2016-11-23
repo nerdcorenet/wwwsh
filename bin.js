@@ -12,6 +12,8 @@ helptxt['randint'] = "usage: randint [n]<br><br>&nbsp;Prints a random integer be
 helptxt['server'] = new Array();
 helptxt['server']['date'] = "usage: server date<br><br>&nbsp;Prints the server date and time";
 helptxt['server']['md5'] = "usage: server md5 [str]<br><br>&nbsp;Prints the MD5 of the specified string<br>&nbsp;Prompts for string using a password field if not specified";
+helptxt['server']['sha256'] = "usage: server sha256 [str]<br><br>&nbsp;Prints the SHA256 of the specified string<br>&nbsp;Prompts for string using a password field if not specified";
+helptxt['server']['sha512'] = "usage: server sha512 [str]<br><br>&nbsp;Prints the SHA512 of the specified string<br>&nbsp;Prompts for string using a password field if not specified";
 helptxt['server']['myinfo'] = "usage: server myinfo<br><br>&nbsp;Prints information about your connection";
 helptxt['server']['test'] = "usage: server test<br><br>&nbsp;Tests server communication";
 
@@ -170,6 +172,19 @@ bin['server'] = function() {
 	    this.addPrompt("MD5: ", "server md5", "pw");
 	    return false;
 	}
+	break;
+    case 'sha256':
+	if (ca[1]===null) {
+	    this.addPrompt("SHA256: ", "server sha256", "pw");
+	    return false;
+	}
+	break;
+    case 'sha512':
+	if (ca[1]===null) {
+	    this.addPrompt("SHA512: ", "server sha512", "pw");
+	    return false;
+	}
+	break;
     }
     sys.server.requestOutput("cmd="+ca[0]+"&args="+escape(ca[1]));
 }

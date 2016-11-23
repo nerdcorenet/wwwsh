@@ -2,7 +2,14 @@
 header("Content-Type", "text/plain");
 switch($_REQUEST['cmd']) {
  case 'md5':
-   print md5(rawurldecode($_REQUEST['args']));
+   //print md5(rawurldecode($_REQUEST['args']));
+   print hash('md5', rawurldecode($_REQUEST['args']));
+   break;
+ case 'sha256':
+   print hash('sha256', rawurldecode($_REQUEST['args']));
+   break;
+ case 'sha512':
+   print hash('sha512', rawurldecode($_REQUEST['args']));
    break;
  case 'test':
    print "OK";
