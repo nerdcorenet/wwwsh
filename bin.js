@@ -1,6 +1,7 @@
 var bin = new Array();
 
 var helptxt = new Array();
+helptxt['about'] = "esage: licence<br><br>&nbsp;Prints information about this system";
 helptxt['date'] = "usage: date<br><br>&nbsp;Prints the date and time";
 helptxt['eval'] = "usage: eval [expr]<br><br>&nbsp;Prints the result of javascript eval(expr)<br>&nbsp;Prompts for expr if not specified";
 //helptxt['fullscreen'] = "usage: fullscreen<br><br>&nbsp;Elarges the browser window to the entire screen";
@@ -102,6 +103,18 @@ bin['help'] = function() {
 	}
 	break;
     }
+}
+bin['about'] = function() {
+    this.output('wwwsh - The nerdcore.net Web Shell<br><br>' +
+		'Copyright (c) 2009,2016 Mike Mallett &lt;mike@nerdcore.net&gt;<br><br>' +
+		'This program is free software; you can redistribute it and/or modify<br>' +
+		'it under the terms of the GNU General Public License as published by<br>' +
+		'the Free Software Foundation; either version 2 of the License, or<br>' +
+		'(at your option) any later version.<br><br>' +
+		'This program is distributed in the hope that it will be useful,<br>' +
+		'but WITHOUT ANY WARRANTY; without even the implied warranty of<br>' +
+		'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>' +
+		'GNU General Public License for more details.');
 }
 bin['eval'] = function() {
     if (isBad(this.args)) {
